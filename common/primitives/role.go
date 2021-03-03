@@ -31,4 +31,5 @@ const (
 	HistoryService  = "history"
 	MatchingService = "matching"
 	WorkerService   = "worker"
+	WebUIService    = "webui"
 )

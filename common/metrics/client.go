@@ -160,6 +160,8 @@ func GetMetricsServiceIdx(serviceName string, logger log.Logger) ServiceIdx {
 		return Matching
 	case primitives.WorkerService:
 		return Worker
+	case primitives.WebUIService:
+		return WebUI
 	default:
 		logger.Fatal("Unknown service name for metrics!", tag.Service(serviceName))
 	}

@@ -69,6 +69,7 @@ const (
 	History
 	Matching
 	Worker
+	WebUI
 	NumServices
 )
 

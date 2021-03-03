@@ -47,6 +47,8 @@ services:
       membershipPort: 6939
       bindOnLocalHost: true
 
+  webui:
+
 clusterMetadata:
   enableGlobalNamespace: false
   failoverVersionIncrement: 10

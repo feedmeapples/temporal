@@ -60,6 +60,8 @@ const (
 	MatchingServiceName = "matching"
 	// WorkerServiceName is the name of the worker service
 	WorkerServiceName = "worker"
+	// WorkerServiceName is the name of the worker service
+	WebUIServiceName = "webui"
 )
 
 const (

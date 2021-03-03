@@ -61,6 +61,7 @@ import (
 	"go.temporal.io/server/service/frontend"
 	"go.temporal.io/server/service/history"
 	"go.temporal.io/server/service/matching"
+	"go.temporal.io/server/service/web"
 	"go.temporal.io/server/service/worker"
 )
 
@@ -82,6 +83,7 @@ var (
 		primitives.HistoryService,
 		primitives.MatchingService,
 		primitives.WorkerService,
+		primitives.WebUIService,
 	}
 )
 
@@ -172,6 +174,8 @@ func (s *Server) Start() error {
 			svc, err = matching.NewService(params)
 		case primitives.WorkerService:
 			svc, err = worker.NewService(params)
+		case primitives.WebUIService:
+			svc, err = web.NewService(params)
 		default:
 			return fmt.Errorf("uknown service %q", svcName)
 		}

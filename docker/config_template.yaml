@@ -220,6 +220,8 @@ services:
             membershipPort: {{ default .Env.WORKER_MEMBERSHIP_PORT "6939" }}
             bindOnIP: {{ default .Env.BIND_ON_IP "127.0.0.1" }}
 
+    webui:
+
 clusterMetadata:
     enableGlobalNamespace: false
     failoverVersionIncrement: 10
